@@ -1,0 +1,39 @@
+---
+title: "SQL - q and a"
+author: "Jan-Philipp Kolb"
+date: "11 April 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## [Show all relations of a database](https://dba.stackexchange.com/questions/1285/how-do-i-list-all-databases-and-tables-using-psql/34419)
+
+```
+SELECT table_schema,table_name
+FROM information_schema.tables
+ORDER BY table_schema,table_name;
+```
+
+
+
+## Further on
+
+- [How to list relations in postgres schema](https://stackoverflow.com/questions/4109017/how-to-list-relations-in-postgres-schema)
+
+<!--
+https://dba.stackexchange.com/questions/120404/how-can-i-drop-relations-in-a-postgresql-database-without-foreign-key-check
+-->
+
+
+```
+DROP TABLE "tableName" CASCADE
+
+DROP TABLE "tmp_sparse_states_7f82658f189d95dfebba75436cfe2c81" CASCADE
+```
+
+<!--
+https://chartio.com/resources/tutorials/how-to-list-databases-and-tables-in-postgresql-using-psql/
+-->
